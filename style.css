@@ -16,7 +16,6 @@ body {
 
 .container {
     text-align: center;
-    align-items: center;
 }
 
 .progress-container {
@@ -26,4 +25,49 @@ body {
     margin-bottom: 30px;
     max-width: 100%;
     width: 350px;
+}
+
+.progress-container::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    background-color: #e0e0e0;
+    width: 100%;
+    z-index: -1;
+
+}
+
+.progress {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    background-color: blue;
+    width: 0%;
+    z-index: -1;
+    transition: 0.4s ease;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background-color: #fff;
+    color: #999;
+    border-radius: 50%;
+    border-color: #e0e0e0;
+    border: 3px solid;
+    height: 30px;
+    width: 30px;
+}
+
+.circle.active {
+    border-color: blue;
 }
