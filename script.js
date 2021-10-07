@@ -19,6 +19,16 @@ function update() {
         //Procent calculating
 
         progress.style.width = ((actives.length -1 )/ (circles.length -1)) * 100 +'%';
+
+        if(currentActive === 4) {
+            next.disabled = true; 
+        } else if (currentActive === 1) {
+            prev.disabled = true;
+        } 
+        else {
+            next.disabled = false;
+            prev.disabled = false;  
+        }
     }
 
 next.addEventListener('click', ()=> {
